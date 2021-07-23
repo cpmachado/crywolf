@@ -7,24 +7,29 @@ crywolf is a bot that monitors oscillations in currency using the [Uphold API].
 
 
 ## Roadmap
-1. Phase 1
-  + [ ] Write a bot that:
-    - [ ] Connects to the [Uphold public ticker].
-    - [ ] Using ticker to extract information regarding the BTC-USD currency pair every 5 seconds.
-    - [ ] Alert when there's an oscillation ≥ 0.01% regarding price, in either way.
-  + [ ] Create README with setup.
-2. Phase 2
-  + [ ] Handle multiple currency pairs at the same at the same time.
-  + [ ] Configurable to:
-    - currency pair
-    - fetch interval
-    - price oscillation percentage
-  + [ ] Test extensively
-3. Phase 3
-  + [ ] Dockerize application
-  + [ ] Create a database to store alerts, with:
-    - Bot configuration
-    - timestamp
+### Phase 1
+
++ [ ] Write a bot that:
+  - [ ] Connects to the [Uphold public ticker].
+  - [ ] Using ticker to extract information regarding the BTC-USD currency pair every 5 seconds.
+  - [ ] Alert when there's an oscillation ≥ 0.01% regarding price, in either way.
++ [ ] Create README with setup.
+
+### Phase 2
+
++ [ ] Handle multiple currency pairs at the same at the same time.
++ [ ] Configurable to:
+  - currency pair
+  - fetch interval
+  - price oscillation percentage
++ [ ] Test extensively
+
+### Phase 3
+
++ [ ] Dockerize application
++ [ ] Create a database to store alerts, with:
+  - Bot configuration
+  - timestamp
 
 
 ## LICENSE

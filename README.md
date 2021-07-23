@@ -4,7 +4,7 @@ crywolf is a bot that monitors oscillations in currency using the [Uphold API].
 
 **NOTE: Took build/test setup from <https://github.com/uphold/uphold-sdk-javascript>**
 
-## Setup
+## Setup and runnning
 
 To install dependencies and run do:
 
@@ -13,6 +13,13 @@ yarn # or npm i
 yarn start # or npm start
 ```
 
+With a configuration file do(using sample):
+
+```text
+yarn start ./resources/sample-config.json # or npm start -- ./resources/sample-config.json
+```
+
+Specs are in the [docs](docs) folder.
 
 ## demo
 

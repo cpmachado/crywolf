@@ -12,6 +12,10 @@
       "statements": 100
     }
   },
+  "coveragePathIgnorePatterns": [
+    "src/app.js",
+    "src/util/logger.js"
+  ],
   "testRegex": "test/.*\\.spec.js",
   "verbose": true
 }

@@ -1,3 +1,6 @@
-import logger from './util/logger';
+import CryWolfBot from './bot';
 
-logger.info('Hello world');
+const bot = new CryWolfBot('0x00');
+
+bot.start();
+bot.stop();

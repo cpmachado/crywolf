@@ -1,7 +1,7 @@
 {
   "name": "@cpmachado/crywolf",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Bot to monitor BTC-USD exchange using the uphold API",
   "keywords": [
     "bot",
@@ -36,6 +36,7 @@
     "eslint": "^7.31.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.4",
+    "prettier": "^2.3.2",
     "jest": "^27.0.6"
   },
   "engines": {
@@ -43,7 +44,6 @@
   },
   "dependencies": {
     "@uphold/uphold-sdk-javascript": "^2.4.0",
-    "prettier": "^2.3.2",
     "winston": "^3.3.3"
   },
   "bugs": {

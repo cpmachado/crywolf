@@ -29,12 +29,12 @@ There are demos according to versions in the [demo](demo) folder.
 
 ### Phase 2
 
-+ [ ] Handle multiple currency pairs at the same at the same time.
-+ [ ] Configurable to:
++ [x] Handle multiple currency pairs at the same at the same time.
++ [x] Configurable to:
   - currency pair
   - fetch interval
   - price oscillation percentage
-+ [ ] Test extensively
++ [x] Test extensively (Bit shallow)
 
 ### Phase 3
 

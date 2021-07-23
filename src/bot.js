@@ -11,6 +11,7 @@ export default class CryWolfBot {
 
   start() {
     logger.info(`Starting CryWolfBot ${this.id}`);
+    logger.debug(JSON.stringify(this.daemons));
     this.online = true;
     this.daemons.forEach((e) => e.start());
   }
@@ -22,10 +23,8 @@ export default class CryWolfBot {
   }
 
   addDaemon(configuration = null, triggerAlert = null) {
-    const id = this.daemons.reduce(
-      (previous, current) => Math.max(previous, current.id),
-      0,
-    );
+    const id = this.daemons.reduce((acc, curr) => Math.max(acc, curr), 0) + 1;
+
     const daemon = new CryWolfDaemon(id, this.client);
     if (configuration) {
       daemon.setConfiguration(configuration);

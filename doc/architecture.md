@@ -1,6 +1,6 @@
 # Architecture
 
-In my first iteration of the challenge, lacking time, I decided for a straight to the mandatory
+In my first iteration of the challenge, lacking time, I decided for a straight walk into the mandatory
 requirements and developed a simple daemon that logs whence it detects oscillation, configured in
 the app.js
 
@@ -12,3 +12,7 @@ We have 3 entities, from the start:
 - app: this entitiy manages the bot itself, with a cli to control it, should I have time.
 
 Thus from in an order we have: app -> bot -> daemon
+
+## Multiple configurations
+
+Loaded via a json to app.js

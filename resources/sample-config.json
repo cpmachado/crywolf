@@ -1,0 +1,14 @@
+{
+  "0x01": [
+    {
+      "pair": "BTC-USD",
+      "interval": 5000,
+      "threshold": 0.01
+    },
+    {
+      "pair": "BTC-EUR",
+      "interval": 1000,
+      "threshold": 0.01
+    }
+  ]
+}

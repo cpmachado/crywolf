@@ -1,0 +1,14 @@
+#!/bin/sh
+
+yarn format:check
+
+if [ $? -ne 0 ];then
+	exit 1
+fi
+
+yarn lint
+
+if [ $? -ne 0 ];then
+	exit 1
+fi
+

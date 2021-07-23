@@ -1,0 +1,56 @@
+{
+  "name": "@cpmachado/crywolf",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Bot to monitor BTC-USD exchange using the uphold API",
+  "keywords": [
+    "bot",
+    "javascript",
+    "uphold"
+  ],
+  "license": "MIT",
+  "author": "Carlos Pinto Machado <cpmachado@protonmail.com>",
+  "main": "dist/node/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cpmachado/crywolf.git"
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "babel src -d dist",
+    "cover": "yarn test --coverage",
+    "format": "prettier --write \"{src,test}/**/*.js\"",
+    "format:check": "prettier --check \"{src,test}/**/*.js\"",
+    "postinstall": "git config --local core.hooksPath $(pwd)/.githooks",
+    "lint": "eslint --cache src test",
+    "lint:fix": "eslint --cache src test --fix",
+    "prestart": "yarn build",
+    "start": "node ./dist/app",
+    "tdd": "yarn test --watch",
+    "test": "jest --config jest.json"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "jest": "^27.0.6"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "dependencies": {
+    "@uphold/uphold-sdk-javascript": "^2.4.0",
+    "prettier": "^2.3.2",
+    "winston": "^3.3.3"
+  },
+  "bugs": {
+    "url": "https://github.com/cpmachado/crywolf/issues"
+  },
+  "homepage": "https://github.com/cpmachado/crywolf#readme",
+  "directories": {
+    "test": "test"
+  }
+}

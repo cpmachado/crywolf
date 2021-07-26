@@ -1,7 +1,7 @@
 {
   "name": "@cpmachado/crywolf",
   "private": true,
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "Bot to monitor BTC-USD exchange using the uphold API",
   "keywords": [
     "bot",
@@ -19,12 +19,12 @@
     "prebuild": "rm -rf dist",
     "build": "babel src -d dist",
     "cover": "yarn test --coverage",
+    "db:setup": "node ./dist/db/migrate",
     "format": "prettier --write \"{src,test}/**/*.js\"",
     "format:check": "prettier --check \"{src,test}/**/*.js\"",
-    "postinstall": "git config --local core.hooksPath $(pwd)/.githooks",
     "lint": "eslint --cache src test",
     "lint:fix": "eslint --cache src test --fix",
-    "prestart": "yarn build",
+    "prestart": "yarn db:setup",
     "start": "node ./dist/app",
     "tdd": "yarn test --watch",
     "test": "jest --config jest.json"
@@ -45,6 +45,8 @@
   "dependencies": {
     "@uphold/uphold-sdk-javascript": "^2.4.0",
     "joi": "^17.4.1",
+    "knex": "^0.95.7",
+    "pg": "^8.6.0",
     "winston": "^3.3.3"
   },
   "bugs": {

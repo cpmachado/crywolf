@@ -1,5 +1,6 @@
 import logger from './util/logger';
 import CryWolfDaemon from './daemon';
+import { defaultConfiguration } from './defaults';
 
 export default class CryWolfBot {
   constructor(id, client) {
@@ -23,7 +24,13 @@ export default class CryWolfBot {
   }
 
   addDaemon(configuration = null, triggerAlert = null) {
-    const id = this.daemons.reduce((acc, curr) => Math.max(acc, curr), 0) + 1;
+    const { pair } = defaultConfiguration;
+    let id = pair;
+
+    if (configuration) {
+      const { pair: configPair } = configuration;
+      id = configPair;
+    }
 
     const daemon = new CryWolfDaemon(id, this.client);
     if (configuration) {

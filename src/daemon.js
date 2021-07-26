@@ -1,5 +1,6 @@
 import logger from './util/logger';
 import { defaultAlert, defaultConfiguration } from './defaults';
+import { getClient } from './db';
 
 export default class CryWolfDaemon {
   constructor(
@@ -15,6 +16,7 @@ export default class CryWolfDaemon {
     }
     this.id = id;
     this.client = client;
+    this.db = null;
     this.configuration = {
       ...defaultConfiguration,
       ...configuration,
@@ -84,15 +86,23 @@ export default class CryWolfDaemon {
       deltaAsk,
     };
 
-    return { activate, delta };
+    return { activate, ore, delta };
   }
 
   async load(refined) {
-    const { activate, delta } = refined;
+    const { activate, ore, delta } = refined;
 
     if (!activate) {
       return;
     }
+
+    const { configuration: config } = this;
+
+    if (!this.db) {
+      this.db = await getClient();
+    }
+
+    await this.db.insert({ config, ore }).into('events');
 
     this.triggerAlert(this.configuration, this.previous, delta);
   }

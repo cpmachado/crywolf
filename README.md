@@ -9,14 +9,8 @@ crywolf is a bot that monitors oscillations in currency using the [Uphold API].
 To install dependencies and run do:
 
 ```text
-yarn # or npm i
-yarn start # or npm start
-```
-
-With a configuration file do(using sample):
-
-```text
-yarn start ./resources/sample-config.json # or npm start -- ./resources/sample-config.json
+   docker-compose up -d --build
+   docker attach 
 ```
 
 Specs are in the [docs](docs) folder.
@@ -45,8 +39,8 @@ There are demos according to versions in the [demo](demo) folder.
 
 ### Phase 3
 
-+ [ ] Dockerize application
-+ [ ] Create a database to store alerts, with:
++ [x] Dockerize application
++ [x] Create a database to store alerts, with:
   - Bot configuration
   - timestamp
 

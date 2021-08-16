@@ -10,14 +10,10 @@ To install dependencies and run do:
 
 ```text
    docker-compose up -d --build
-   docker attach 
+   docker attach crywolf_app_1
 ```
 
 Specs are in the [docs](docs) folder.
-
-## demo
-
-There are demos according to versions in the [demo](demo) folder.
 
 ## Roadmap
 ### Phase 1
